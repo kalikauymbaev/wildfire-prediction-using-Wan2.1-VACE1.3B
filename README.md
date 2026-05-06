@@ -28,19 +28,19 @@ pip install -e .
 source wanvenv/bin/activate
 4) First, install core build tools and the Numpy version you need
 pip install ninja packaging setuptools wheel "numpy>=1.23.5,<2"
-Install the main research stack
+5) Install the main research stack
 pip install "torch>=2.4.0" "torchvision>=0.19.0" "di`users>=0.31.0" \
 "transformers>=4.49.0" "tokenizers>=0.20.3" "accelerate>=1.1.1" \
 "gradio>=5.0.0" "opencv-python>=4.9.0.80" \
 tqdm imageio easydict ftfy dashscope imageio-`mpeg
-# Set paths for your specific CUDA 13.0 environment
+6) Set paths for your specific CUDA 13.0 environment
 export CUDA_HOME=/usr/local/cuda
 export PATH=$CUDA_HOME/bin:$PATH
 export LD_LIBRARY_PATH=$CUDA_HOME/lib64:$PATH
-# Use 12 parallel processes for a fast, stable build
+7) Use 12 parallel processes for a fast, stable build
 export MAX_JOBS=12
 pip install flash-attn --no-build-isolation
-5) hf download Wan-AI/Wan2.1-VACE-1.3B --local-dir ./Wan2.1-VACE-1.3B
+8) hf download Wan-AI/Wan2.1-VACE-1.3B --local-dir ./Wan2.1-VACE-1.3B
 Example of generation video on Wan2.1-VACE1.3B:
 python generate.py --task vace-1.3B --size 832*480 --ckpt_dir ./Wan2.1-VACE-1.3B --
 src_ref_images examples/girl.png,examples/snake.png --prompt "在一个欢乐而充满节日
