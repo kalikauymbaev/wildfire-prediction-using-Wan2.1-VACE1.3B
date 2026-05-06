@@ -26,9 +26,9 @@ cd DiffSynth-Studio
 pip install -e .
 3) python -m venv wanvenv
 source wanvenv/bin/activate
-4) # 1. First, install core build tools and the Numpy version you need
+4) First, install core build tools and the Numpy version you need
 pip install ninja packaging setuptools wheel "numpy>=1.23.5,<2"
-# 2. Install the main research stack
+Install the main research stack
 pip install "torch>=2.4.0" "torchvision>=0.19.0" "di`users>=0.31.0" \
 "transformers>=4.49.0" "tokenizers>=0.20.3" "accelerate>=1.1.1" \
 "gradio>=5.0.0" "opencv-python>=4.9.0.80" \
